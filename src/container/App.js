@@ -2,6 +2,7 @@ import React, { Component } from  'react';
 import SearchBox from '../component/SearchBox';
 import Scroll from '../component/Scroll';
 import CardList from '../component/CardList';
+import ErrorBoundary from '../component/ErrorBoundary';
 
 class App extends Component {
   constructor() {
@@ -30,10 +31,12 @@ class App extends Component {
   render() {
     return (
       <div className='tc'>
-        <h1 className='f-subheadline mv3'>RobotFriends</h1>
+        <h1 className='f-headline mv3'>RobotFriends</h1>
         <SearchBox onSearchChange={this._onSearchChange}/>
         <Scroll> 
-          {this._renderCardList()}
+          <ErrorBoundary>
+            {this._renderCardList()}
+          </ErrorBoundary>
         </Scroll>
       </div>
     )

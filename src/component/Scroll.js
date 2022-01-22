@@ -1,7 +1,7 @@
 import React from "react";
 
 /**
- * Renders scroll
+ * Renders scroll.
  * @param {Object} props 
  * @returns {TemplateResult} scroll
  */
