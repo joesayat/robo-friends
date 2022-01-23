@@ -7,9 +7,6 @@ import Card from './Card';
  * @returns {TemplateResult} card list
  */
 const CardList = ({robots}) => {
-  // if (true) {
-  //   throw new Error('nooo')
-  // }
   return(
     <div className='card-list pa1'>
       {robots.map(robot => {
